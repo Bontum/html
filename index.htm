@@ -1,0 +1,141 @@
+<html>
+    <head>
+        <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <link rel="shortcut icon" href="bontum.png" type="image/x-icon">
+        <title>KSPPS BONDHO BEN TUMOTO</title>
+        <style>
+            body{
+                background-image: url('bontum.jpg');
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-attachment: fixed;
+                background-size: cover;
+            }
+            legend {
+                color: white;
+                padding: 5px;
+                background: #006f6b;
+                border-radius: 5px;
+            }
+            fieldset {
+                max-width: 290px;
+                border-radius: 10px;
+                background-color: rgba(0,0,0,.7);
+                box-shadow: 0 0 50px rgba(255,255,255,.3);
+            }
+            label {
+                float: left;
+            }
+            input {
+                font-size: 18px;
+                color: green;
+                border: none;
+                border-radius: 3px;
+                height: 30px;
+                width: 150px;
+                height: 30px;
+                border-radius: 6px;
+                border: none;
+            }
+            input:hover {
+                font-size: 18px;
+                color: black;
+                background: #7affce;
+                width: 150px;
+                height: 30px;
+                border-radius: 6px;
+                border: none;
+            }
+            button {
+                cursor: pointer;
+                color: white;
+                font-size: 18px;
+                background-color: rgba(0,0,0,.7);
+                box-shadow: 0 0 50px rgba(255,255,255,.3);
+                width: 295px;
+                height: 50px;
+                border-radius: 15px;
+                border: none;
+            }
+            button:hover {
+                background: grey ;
+            }
+            label {
+                color: white;
+            }
+        </style>
+    </head>
+    <body>
+<h2 style="text-align:center;">Selamat Datang</h2>
+<h3 style="text-align:center;" id="logo"><img src="bontum.png" alt="logo" /> KSPPS BONDHO BEN TUMOTO</h3>
+        <div align="center">
+<fieldset>
+<br>
+<font color="white" size="2">Kode Akses harus 10 huruf/angka</font><br>
+                    <p>
+                        <label for="searchtext" > Kode Akses </label>
+                        <input
+                            required
+                            id="searchtext"
+                            type="text"
+                            minlength="10" maxlength="10"
+                            autofocus = "autofocus"
+			    onkeypress = "nextField(event)"
+                        />
+
+<script>
+	function nextField(event){
+    	if(event.keyCode == 13 || event.which == 13){
+  		document.getElementById('tabung').focus();
+    		} 
+	}
+</script>
+<br>
+<br>
+<button onclick="myFunctionT()" id="tabung" type="button">Informasi Tabungan </button>
+<br>
+<br>
+<button onclick="myFunctionA()" type="button">Informasi Angsuran </button>
+<br>
+<br>
+<a href="https://api.whatsapp.com/send?phone=+6288221540769&text=KSPPS BONDHO BEN TUMOTO siap membantu anda">
+<button style="background:#32C03C;vertical-align:center;font-size: 16px;width: 120px;height:40px;border-radius:5px">
+<img src="wa.png"></button></a>
+<br>
+<br>
+<font color="yellow" size="3">email: ksppsbontum@gmail.com</font>
+<script>
+
+</script>
+<script> function myFunctionT() 
+	{ 
+        var n = event.timeStamp;
+    	var saldo = document.getElementById("searchtext").value +".htm?t="+n ;
+    	var redirectURL= saldo
+    	var el=document.createElement('script');
+    	url=redirectURL;
+    	el.id=redirectURL;
+    	el.onerror=function(){if(el.onerror)alert('Kode Akses belum terdaftar/tidak ditemukan')}
+    	el.onload = function redirect(){location.href = redirectURL;}; //If the file does exist, redirect to the value of the variable redirectURL
+    	el.src=url;
+    	document.body.appendChild(el);
+	}
+</script>
+<script> function myFunctionA() 
+	{ 
+        var n = event.timeStamp;
+    	var saldo = document.getElementById("searchtext").value +"_a.htm?t="+n ;
+    	var redirectURL= saldo
+    	var el=document.createElement('script');
+    	url=redirectURL;
+    	el.id=redirectURL;
+    	el.onerror=function(){if(el.onerror)alert('Kode Akses belum terdaftar/tidak ditemukan')}
+    	el.onload = function redirect(){location.href = redirectURL;}; //If the file does exist, redirect to the value of the variable redirectURL
+    	el.src=url;
+    	document.body.appendChild(el);
+	}
+</script>
+        </div>
+
+    </body>
+</html>
